@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Shopping Form | Umoja store </title>
+    <link rel="stylesheet" href="shopping.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ <!--header-->
+<div class="header">
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+              <a href="index.html"> <img src="pictures/BLACK.png" alt="" width="200px" height=""></a> 
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="items.html">Products</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="contact us.html">Contact Us</a></li>
+                    <li><a href=""><img src="pictures/user.png" alt="user" width="20px" height="20px"></a></li>
+                    <li>
+                        <div id="totalprice">
+                               <b>  $0.00</b>
+
+                        </div>
+                    </li>
+                    <li><div class="ecran">
+                        <h4 class="cc" colspan="4" id="num"><center>0</center></h4>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <a href="shopping form.html"><img src="images/cart.png" alt="" width="30px" height="30px"></a>
+        </div>
+    </div>
+
+    <!--items-->
+    <form id="myForm" onsubmit="return validateForm()" method="post">
+        <div id="box">
+            <div id="box1">
+                <table class="centered_table1">
+                    <tr><th>ASUS ROG Strix G15</th></tr>  
+                    <tr><td><img src="images/asus.png" alt="asus"></td></tr>
+                    <tr><td id="pd_item1">RTX 3060 GPU<br>12th GEN CORE I7  <br> $1999.00 </td></tr>
+                    <tr><td><input  class="add" type="button" value="Add to cart" onclick="count_item();item_1();total_pr ()"></td></tr>
+                    <tr><td>
+                          <select class="choice" name="" id="ITEM1" onchange="pd_swap1()">
+                                <option value="Property1">1TB SSD 16GB RAM CORE I7 </option>
+                                <option value="Property2">2TB SSD 32GB RAM CORE I9 </option>
+                            </select>
+                    </td></tr>    
+                </table>
+            </div>
+            <div id="box1">
+                <table class="centered_table">
+                    <tr><th>HP Victus 16</th></tr> 
+                    <tr><td><img src="images/HP.png" alt="HP" ></td></tr>
+                    <tr><td id="pd_item2">RTX 3050 GPU <br>AMD RYZEN 5 <br> $1299.00 </td></tr>
+                    <tr><td><input class="add" type="button" value="Add to cart" onclick="count_item();item_2();total_pr ()"></td></tr>
+                    <tr><td>    
+                        <select   class="choice" name="" id="ITEM2" onchange="pd_swap2()">
+                            <option value="Property1">1TB SSD 16GB RAM RYZEN 5</option>
+                            <option value="Property2">2TB SSD 32GB RAM RYZEN 7</option>
+                        </select>
+                    </td></tr>
+                </table>
+            </div>
+            <div id="box1">
+                <table class="centered_table">
+                    <tr><th>MacBook Pro 14"</th></tr> 
+                    <tr><td><img src="images/macbook.png" alt="macbook"></td></tr>
+                    <tr><td id="pd_item3">M1 PRO <br>32GB RAM <br> $2999.00</td></tr> 
+                    <tr><td><input class="add" type="button" value="Add to cart" onclick="count_item();item_3();total_pr ()"></td></tr>
+                    <tr><td>
+                        <select  class="choice" name="" id="ITEM3" onchange="pd_swap3()">
+                            <option value="Property1">M1 PRO 2TB SSD 32GB RAM</option>
+                            <option value="Property2">M1 MAX 4TB SSD 64GB RAM</option>
+                        </select>
+                    </td></tr>
+                </table>
+            </div>
+            <div id="box1">
+                <table class="centered_table">
+                    <tr><th>Lenovo Ideapad Gaming 3</th></tr>  
+                    <tr><td><img src="images/lenovo.png" alt="lenovo"></td></tr>
+                    <tr><td id="pd_item4">GTX 1650 GPU<br>12th GEN CORE I5<br> $799.00 </td></tr> 
+                    <tr><td><input class="add" type="button" value="Add to cart" onclick="count_item();item_4();total_pr ()"></td></tr>
+                    <tr><td>
+                        <select  class="choice" name="" id="ITEM4" onchange="pd_swap4()">
+                            <option value="Property1">500GB SSD 8GB RAM CORE I5 </option>
+                            <option value="Property2">1TB SSD 16GB RAM CORE I7 </option>
+                        </select>
+                    </td></tr>
+                </table>
+            </div>
+            <div id="box1">
+                <table class="centered_table">
+                    <tr><th>Dell XPS 13 9370</th></tr> 
+                    <tr><td><img src="images/dell.png" alt="dell" ></td></tr>
+                    <tr><td id="pd_item5">INTEL HD GRAPHICS 620 <br>11th GEN CORE I5<br> $999.00</td></tr> 
+                    <tr><td><input class="add" type="button" value="Add to cart" onclick="count_item();item_5();total_pr ()"></td></tr>
+                    <tr><td>
+                        <select  class="choice" name="" id="ITEM5" onchange="pd_swap5()">
+                            <option value="Property1">500GB SSD 8GB RAM CORE I5</option>
+                            <option value="Property2">1TB SSD 16GB RAM CORE I7</option>
+                        </select>
+                    </td></tr>
+                </table>
+            </div>
+            <div id="box1">
+                <table class="centered_table">
+                    <tr><th>Lenovo Thinkpad X1 Carbon</th></tr> 
+                    <tr><td><img src="images/item_x1.png" alt="dell" ></td></tr>
+                    <tr><td id="pd_item10">INTEL HD GRAPHICS 620 <br>11th GEN CORE I5<br> $999.00</td></tr> 
+                    <tr><td><input class="add" type="button" value="Add to cart" onclick="count_item();item_10();total_pr ()"></td></tr>
+                    <tr><td>
+                        <select  class="choice" name="" id="ITEM10" onchange="pd_swap10()">
+                            <option value="Property1">500GB SSD 8GB RAM CORE I5</option>
+                            <option value="Property2">1TB SSD 16GB RAM CORE I7</option>
+                        </select>
+                    </td></tr>
+                </table>
+            </div>
+            <div id="box1">
+                <table class="centered_table1">
+                    <tr><th>Dell Alienware M15</th></tr>  
+                    <tr><td><img src="images/item_dellaw.png" alt="asus"></td></tr>
+                    <tr><td id="pd_item6">RTX 3060 GPU<br>12th GEN CORE I7  <br> $1999.00 </td></tr>
+                    <tr><td><input  class="add" type="button" value="Add to cart" onclick="count_item();item_6();total_pr ()"></td></tr>
+                    <tr><td>
+                          <select class="choice" name="" id="ITEM6" onchange="pd_swap6()">
+                                <option value="Property1">1TB SSD 16GB RAM CORE I7 </option>
+                                <option value="Property2">2TB SSD 32GB RAM CORE I9 </option>
+                            </select>
+                    </td></tr>    
+                </table>
+            </div>
+            <div id="box1">
+                <table class="centered_table">
+                    <tr><th>ASUS TUF A15</th></tr>  
+                    <tr><td><img src="images/item_tuf.png" alt="lenovo"></td></tr>
+                    <tr><td id="pd_item9">GTX 1650 GPU<br>12th GEN CORE I5<br> $799.00 </td></tr> 
+                    <tr><td><input class="add" type="button" value="Add to cart" onclick="count_item();item_9();total_pr ()"></td></tr>
+                    <tr><td>
+                        <select  class="choice" name="" id="ITEM9" onchange="pd_swap9()">
+                            <option value="Property1">500GB SSD 8GB RAM CORE I5 </option>
+                            <option value="Property2">1TB SSD 16GB RAM CORE I7 </option>
+                        </select>
+                    </td></tr>
+                </table>
+            </div>
+            <div id="box1">
+                <table class="centered_table">
+                    <tr><th>HP Omen 16</th></tr> 
+                    <tr><td><img src="images/item_omen.png" alt="HP" ></td></tr>
+                    <tr><td id="pd_item7">RTX 3050 GPU <br>AMD RYZEN 5 <br> $1299.00 </td></tr>
+                    <tr><td><input class="add" type="button" value="Add to cart" onclick="count_item();item_7();total_pr ()"></td></tr>
+                    <tr><td>    
+                        <select   class="choice" name="" id="ITEM7" onchange="pd_swap7()">
+                            <option value="Property1">1TB SSD 16GB RAM RYZEN 5</option>
+                            <option value="Property2">2TB SSD 32GB RAM RYZEN 7</option>
+                        </select>
+                    </td></tr>
+                </table>
+            </div>
+            <div id="box1">
+                <table class="centered_table">
+                    <tr><th>MacBook Pro 16"</th></tr> 
+                    <tr><td><img src="images/item_pro16.png" alt="macbook"></td></tr>
+                    <tr><td id="pd_item8">M1 PRO <br>32GB RAM <br> $2999.00</td></tr> 
+                    <tr><td><input class="add" type="button" value="Add to cart" onclick="count_item();item_8();total_pr ()"></td></tr>
+                    <tr><td>
+                        <select  class="choice" name="" id="ITEM8" onchange="pd_swap8()">
+                            <option value="Property1">M1 PRO 2TB SSD 32GB RAM</option>
+                            <option value="Property2">M1 MAX 4TB SSD 64GB RAM</option>
+                        </select>
+                    </td></tr>
+                </table>
+            </div>
+        <br>
+        <br>
+        <br>
+            <!--payement-->
+            
+            <div id="box6">    
+                <table class="right">
+                    <tr class="centered">
+                        <th colspan="5">Choose Your Payment Method</th>
+                    </tr>
+                    <tr><td colspan="5"><br></td></tr>
+                    <tr class="centered">
+                        <td colspan="3"><input type="radio" name="bankcard" required id="">Visa</td>
+                        <td colspan="2"><input type="radio" name="bankcard" required>MasterCard</td>
+                    </tr>
+                    <tr><td colspan="5"><br></td></tr>
+                    <tr>
+                        <th class="R">Name on the card: </th>
+                        <td><input type="text" maxlength="15" required></td>
+                        <td><input type="text" maxlength="15" required></td>
+                        <td><input type="text" maxlength="15"></td>
+                        <td><input type="text" maxlength="15"></td>
+                    </tr>
+                    <tr><td colspan="5"><br></td></tr>
+                    <tr>
+                        <th class="R">Expire date :</th>
+                        <td>
+                            <select name="month" id="">
+                                <option value="">01</option>
+                                <option value="">02</option>
+                                <option value="">03</option>
+                                <option value="">04</option>
+                                <option value="">05</option>
+                                <option value="">06</option>
+                                <option value="">07</option>
+                                <option value="">08</option>
+                                <option value="">09</option>
+                                <option value="">10</option>
+                                <option value="">11</option>
+                                <option value="">12</option>
+                            </select>
+                        </td>
+                        <br>
+                        <td>
+                            <select name="year" id="">
+                                <option value="">2023</option>
+                                <option value="">2024</option>
+                                <option value="">2025</option>
+                                <option value="">2026</option>
+                                <option value="">2027</option>
+                                <option value="">2028</option>
+                            </select>
+                        </td>
+                        <br>
+                    </tr>
+                    <tr><td colspan="5"><br></td></tr>
+                    <tr>
+                        <th class="R">CVV</th>
+                        <td>
+                            <input type="text" name="CVV" id="cvv" pattern="[0-9]*" minlength="3" maxlength="3" required>
+                        </td>
+                    </tr>
+                    <tr><td colspan="5"><br></td></tr>
+                    <tr>
+                        <th class="R" colspan="4">Items</th>
+                        <th class="R">Total</th>
+                    </tr>
+                    <tr>
+                        <td class="R" colspan="4" id="items_num">x0</td>
+                        <td class="R" id="total_price">0</td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" class="R"><input type="button" name="emptycart" id="shopping_form" onclick="empty_cart()" value="Empty cart"></td>
+                        <td class="R"><input type="submit" name="checkout" id="shopping_form" value="Checkout"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </form>
+</div>
+<script src="shopping.js"></script>
+</body>
+</html>
